@@ -1,5 +1,5 @@
 const Doc = require("../models/doc");
-const LostDocument = require("../models/LostDocument");
+
 const nodemailer = require("nodemailer");
 
 // Helper function for error handling
