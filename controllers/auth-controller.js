@@ -19,7 +19,10 @@ mongoose.connect(dbURI, {
 // Register User
 exports.register = async (req, res) => {
   try {
-    const { names, email, phone, homelocation, password } = req.body;
+    const { names, identifier, homelocation, password } = req.body;
+
+    const phone = identifier;
+    const email = identifier;
 
     // Check if user already exists (by email or phone)
     const existingUser = await User.findOne({ $or: [{ email }, { phone }] });

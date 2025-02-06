@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema({
     district: { type: String, required: true, enum: rwandaDistricts },
     sector: { type: String, required: true },
   },
-  phone: { type: String, required: true, match: /^\+250\d{9}$/ },
+  phone: { type: String, required: true },
   password: { type: String, required: true },
 }, { timestamps: true });
 
