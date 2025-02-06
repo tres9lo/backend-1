@@ -96,7 +96,7 @@ exports.getLostItems = async (req, res) => {
 exports.notifyFinder = async (req, res) => {
   try {
     const { documentId, claimerId, claimerEmail } = req.body;
-    const document = await LostDocument.findById(documentId);
+    const document = await Doc.findById(documentId);
 
     if (!document) return res.status(404).json({ status: "failed", message: "Document not found" });
     if (document.status === "claimed") return res.status(400).json({ status: "failed", message: "Document already claimed" });
