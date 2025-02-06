@@ -4,15 +4,17 @@ const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const User = require('../models/User'); // Adjust path as needed
 const Seeker = require('../models/seeker'); // Adjust path if necessary
-const Founder = require('../models/Founder'); // Adjust path if necessary
+const Founder = require('../models/finder'); // Adjust path if necessary
 require('dotenv').config();
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log('DB Connection Error:', err));
+// Database Connection
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/testDB'; // Replace with your MongoDB URI
+mongoose.connect(dbURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((err) => console.error('MongoDB connection error:', err));
 
 // Register User
 exports.register = async (req, res) => {
