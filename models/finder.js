@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 
 // Finder Model
 const FinderSchema = new mongoose.Schema({

@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 
 // Seeker Model
 const SeekerSchema = new mongoose.Schema({
