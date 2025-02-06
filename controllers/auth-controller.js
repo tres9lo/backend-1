@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGO_URI, {
 }).then(() => console.log('MongoDB Connected'))
   .catch(err => console.log('DB Connection Error:', err));
 
-// 🟢 Register User
+//  Register User
 exports.register = async (req, res) => {
   try {
     const { names, email, phone, homelocation, password } = req.body;
@@ -41,7 +41,7 @@ exports.register = async (req, res) => {
   }
 };
 
-// 🟢 Login User
+//  Login User
 exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
