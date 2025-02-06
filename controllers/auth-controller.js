@@ -19,7 +19,7 @@ mongoose.connect(dbURI, {
 // Register User
 exports.register = async (req, res) => {
   try {
-    const { names, identifier, homelocation, password } = req.body;
+    const { names, identifier, homeLocation, password } = req.body;
 
     const phone = identifier;
     const email = identifier;
@@ -36,8 +36,8 @@ exports.register = async (req, res) => {
       names,
       email,
       phone,
-      homelocation,
-      password: hashedPassword,
+      homeLocation,
+      password,
     });
 
     await newUser.save();
