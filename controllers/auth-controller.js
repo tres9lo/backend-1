@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
-const User = require('../models/User'); // Adjust path as needed
+const User = require('../models/user'); // Adjust path as needed
 const Seeker = require('../models/seeker'); // Adjust path if necessary
 const Founder = require('../models/finder'); // Adjust path if necessary
 require('dotenv').config();
