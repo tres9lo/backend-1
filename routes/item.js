@@ -8,8 +8,7 @@ const {
   postLostItem,
   getFoundItems,
   getFoundItem,
-  getLostItem,
-  updateItemStatus,
+  getLostItems,
   updateFoundItem,  // Corrected name for consistency
   deleteFoundItem,
 } = require('../controllers/itemController'); // Assuming your controller is named itemController.js
@@ -31,7 +30,7 @@ router.delete('/found/:id', requireAuth, deleteFoundItem); // Include item ID fo
 
 // Lost Item Routes
 router.post('/lost', requireAuth, postLostItem);
-router.get('/lost', requireAuth, getLostItem);
+router.get('/lost', requireAuth, getLostItems);
 
 
 module.exports = router;
