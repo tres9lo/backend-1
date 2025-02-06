@@ -8,7 +8,7 @@ const Founder = require('../models/finder'); // Adjust path if necessary
 require('dotenv').config();
 
 // Database Connection
-const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/testDB'; // Replace with your MongoDB URI
+const dbURI = process.env.MONGODB_URI || 'mongodb+srv://rben5838:b3nth3on3@cluster0.iecottd.mongodb.net/ox1?retryWrites=true&w=majority&appName=Cluster0'; // Replace with your MongoDB URI
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
